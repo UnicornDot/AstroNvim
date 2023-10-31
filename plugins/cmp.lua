@@ -12,7 +12,7 @@ return {
     local luasnip = require "luasnip"
 
     local function has_words_before()
-      local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+      local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
       return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match "%s" == nil
     end
 
@@ -62,8 +62,12 @@ return {
         -- 自动选中第一条
         completeopt = "menu,menuone,noinsert",
       },
+      confirm_opts = {
+        select = true,
+      },
       mapping = {
-        ["<CR>"] = cmp.config.disable,
+        -- ["<CR>"] = cmp.config.disable,
+        ["<CR>"] = cmp.mapping.confirm { select = true },
         -- ctrl + e关闭补全窗口
         -- <C-n> and <C-p> for navigating snippets
         ["<C-n>"] = cmp.mapping(function()
