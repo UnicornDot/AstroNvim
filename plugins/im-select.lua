@@ -1,4 +1,4 @@
-return {
+local option = {
   "chaozwn/im-select.nvim",
   lazy = false,
   opts = {
@@ -6,3 +6,4 @@ return {
     set_previous_events = { "InsertEnter", "FocusLost" },
   },
 }
+return {} 
