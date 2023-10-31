@@ -29,6 +29,8 @@ return {
       },
       filesystem = {
         -- hijack_netrw_behavior = "open_default",
+        -- bind_to_cmd = false,
+        group_empty_dirs = true,
         filtered_items = {
           always_show = { ".github", ".gitignore" },
           hide_dotfiles = false,

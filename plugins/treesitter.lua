@@ -10,6 +10,13 @@ return {
         -- WARN: https://github.com/windwp/nvim-ts-autotag/issues/124 autocompletion bug
         enable_close_on_slash = false,
       },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          node_incremental = 'v',
+          node_decremental = 'V',
+        },
+      },
     })
   end,
 }

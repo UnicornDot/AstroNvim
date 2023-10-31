@@ -8,6 +8,11 @@ return {
     local actions = require "telescope.actions"
     return require("astronvim.utils").extend_tbl(opts, {
       extensions = {},
+      defaults = {
+        layout_config = {
+          horizontal = { prompt_position = "bottom", preview_width = 0.55 },
+        },
+      },
       pickers = {
         find_files = {
           -- dot file

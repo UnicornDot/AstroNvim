@@ -8,6 +8,11 @@ return {
   },
   lazy = {
     defaults = { lazy = true },
+    ui = {
+      width = 0.8,
+      height = 0.8,
+      border = "rounded",
+    },
     performance = {
       rtp = {
         -- customize default disabled vim plugins
